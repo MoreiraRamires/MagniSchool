@@ -1,0 +1,21 @@
+﻿@model Curso
+
+
+<form asp-controller="Curso" asp-action="Create" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Curso</label>
+            <input type="text" class="form-control" asp-for="Nome"  placeholder="Nome do Curso">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputPassword4">Disciplinas</label>
+            <input type="number" class="form-control" asp-for="Disciplinas" placeholder="Digite as disciplinas">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputAddress">Professores</label>
+        <input type="text" class="form-control" asp-for="Professor" placeholder="Nome do Professor">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+</form>

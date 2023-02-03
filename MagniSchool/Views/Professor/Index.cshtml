@@ -1,0 +1,49 @@
+﻿
+@model List<Professor>
+@{
+
+}
+
+
+@if(Model != null)
+{
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Data Nascimento</th>
+                <th scope="col">Salario</th>
+                <th scope="col">Ação</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+
+           
+            @foreach (Professor professor in Model)
+            {
+                <tr>
+                    <th scope="row">@professor.Id </th>
+                    <td>@professor.Nome</td>
+                    <td>@professor.DataNascimento</td>
+                    <td>@professor.Salario</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <a class="btn btn-secondary">Editar</a>
+                          <a class="btn btn-danger">Apagar</a>
+                        </div>
+                    </td>
+                </tr>
+                
+            }
+        
+        </tbody>
+    </table>
+
+}
+
+
+    <a class="btn btn-primary" asp-controller="Professor" asp-action="Create">Adicionar Novo Professor</a>

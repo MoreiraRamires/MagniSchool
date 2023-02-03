@@ -1,0 +1,45 @@
+﻿@model List<Disciplina>;
+
+@{
+    Layout = "_Layout";
+}
+
+@if( Model != null){
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Curso</th>
+                <th scope="col">Qntd Professor</th>
+                <th scope="col">Qnt Alunos</th>
+                <th scope="col">Ação</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var disciplina in Model)
+            {
+                <tr>
+                    <th scope="row">@disciplina.Id</th>
+                    <td>@disciplina.Nome</td>
+                    <td>@disciplina.Professor</td>
+                    <td>@disciplina.Alunos</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a class="btn btn-secondary">Editar</a>
+                            <a class="btn btn-danger">Apagar</a>
+                        </div>
+                    </td>
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+
+
+}
+
+<a asp-controller="Disciplina" asp-action="Create">Adicionar Disciplina</a>

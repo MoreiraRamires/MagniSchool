@@ -1,0 +1,47 @@
+﻿@model List<Curso>
+@{
+
+}
+
+@if(Model != null)
+{
+    
+    <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Curso</th>
+            <th scope="col">Professor</th>
+            <th scope="col">Qnt Alunos</th>
+            <th scope="col">Média de Notas</th>
+            <th scope="col">Ação</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var curso in Model)
+        {
+            <tr>
+            <th scope="row">@curso.Id</th>
+            <td>@curso.Nome</td>
+            <td>@curso.Professor</td>
+            <td>@curso.Alunos</td>
+            <td>@curso.MediaNotas</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <a class="btn btn-secondary" asp-controller="Curso" asp-action="Edit" asp-route-id="@curso.Id">Editar</a>
+                            <a class="btn btn-danger" asp-controller="Curso" asp-route-id="@curso.Id">Apagar</a>
+
+                </div>
+            </td>
+        </tr>
+            
+        }
+        
+    </tbody>
+</table>
+}
+
+<a class="btn btn-primary" asp-controller="Curso" asp-action="Create">Atualizar</a>
+
