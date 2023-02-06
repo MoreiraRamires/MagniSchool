@@ -20,6 +20,25 @@ namespace MagniSchool.Repository
             return disciplina;
         }
 
+        public Disciplina AtualizarDados(Disciplina disciplina)
+        {
+            Disciplina disciplinaDB = BuscarPorId(disciplina.Id);
+
+            disciplinaDB.Nome = disciplina.Nome;
+            disciplinaDB.Professor = disciplina.Professor;
+
+            _bancoContext.Disciplinas.Update(disciplinaDB);
+            _bancoContext.SaveChanges();
+
+            return disciplina;
+        }
+
+        public Disciplina BuscarPorId(int id)
+        {
+            Disciplina disciplina = _bancoContext.Disciplinas.SingleOrDefault(x => x.Id == id);
+            return disciplina;
+        }
+
         public List<Disciplina> BuscarTodos()
         {
             List<Disciplina> disciplinas= _bancoContext.Disciplinas.ToList();

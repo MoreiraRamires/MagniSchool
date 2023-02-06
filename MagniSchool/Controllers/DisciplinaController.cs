@@ -24,12 +24,27 @@ namespace MagniSchool.Controllers
         {
             return View();
         }
+        public IActionResult Edit(int id)
+        {
+            Disciplina disciplina = _disciplinaRepository.BuscarPorId(id);
+
+            return View(disciplina);
+        }
 
         [HttpPost]
         public IActionResult Create(Disciplina disciplina)
         {
             _disciplinaRepository.Adicionar(disciplina);
             return RedirectToAction("Index");
+        }
+
+        public IActionResult Alterar(Disciplina disciplina)
+        {
+            _disciplinaRepository.AtualizarDados(disciplina);
+            
+
+            return RedirectToAction("Index");
+
         }
     }
 }

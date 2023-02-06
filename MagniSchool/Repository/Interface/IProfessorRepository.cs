@@ -7,6 +7,8 @@ namespace MagniSchool.Repository.Interface
     {
         Professor Adicionar (Professor professor);
 
+        public Professor Atualizar(Professor professor);
+        Professor BuscarProfessorPorId(int id);
         List<Professor> BuscarTodos();
 
     }

@@ -23,11 +23,25 @@ namespace MagniSchool.Controllers
             return View();
         }
 
+        public IActionResult Edit(int id)
+        {
+            Professor professor = _professorRepository.BuscarProfessorPorId(id);
+            return View(professor);
+        }
+
 
         [HttpPost]
         public IActionResult Create(Professor professor)
         {
             _professorRepository.Adicionar(professor);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Professor professor)
+        {
+             _professorRepository.Atualizar(professor); 
+
             return RedirectToAction("Index");
         }
     }

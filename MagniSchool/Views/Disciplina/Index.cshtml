@@ -28,8 +28,8 @@
                     <td>@disciplina.Alunos</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <a class="btn btn-secondary">Editar</a>
-                            <a class="btn btn-danger">Apagar</a>
+                            <a class="btn btn-secondary" asp-controller="Disciplina" asp-action="Edit" asp-route-id="@disciplina.Id">Editar</a>
+                            <a class="btn btn-danger" asp-controller="Disciplina" asp-action="EraseConfirm">Apagar</a>
                         </div>
                     </td>
                 </tr>

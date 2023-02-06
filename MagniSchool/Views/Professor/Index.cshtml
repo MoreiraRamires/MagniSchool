@@ -32,8 +32,8 @@
                     <td>@professor.Salario</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
-                          <a class="btn btn-secondary">Editar</a>
-                          <a class="btn btn-danger">Apagar</a>
+                          <a class="btn btn-secondary" asp-controller="Professor" asp-action="Edit" asp-route-id="@professor.Id">Editar</a>
+                            <a class="btn btn-danger" asp-controller="Professor" asp-action="Edit" asp-route-id="@professor.Id">Apagar</a>
                         </div>
                     </td>
                 </tr>

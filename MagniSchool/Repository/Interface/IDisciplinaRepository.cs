@@ -6,7 +6,10 @@ namespace MagniSchool.Repository.Interface
     public interface IDisciplinaRepository
     {
         Disciplina Adicionar(Disciplina disciplina);
-
+        Disciplina AtualizarDados(Disciplina disciplina);
+        Disciplina BuscarPorId(int id);
         List<Disciplina> BuscarTodos();
+
+
     }
 }
