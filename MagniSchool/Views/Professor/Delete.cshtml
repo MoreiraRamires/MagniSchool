@@ -1,0 +1,6 @@
+﻿@model Professor
+
+<h3>Voce tem certeza que deseja deletar @Model.Nome ?</h3>
+
+<a class="btn btn-primary" type="button" asp-controller="Professor" asp-action="Index"> Não, eu desisti de deletar.</a>
+<a class="btn btn-danger" type="button" asp-controller="Professor" asp-action="Deletar" asp-route-id="@Model.Id"> Sim, quero deletar </a>

@@ -46,5 +46,17 @@ namespace MagniSchool.Repository
         {
             return _bancoContext.Professores.ToList();
         }
+
+        public bool Deletar(int id)
+        {
+            Professor professorDb = BuscarProfessorPorId(id);
+
+            if (professorDb == null) throw new System.Exception("Não foi possível deletar esse professor");
+
+            _bancoContext.Professores.Remove(professorDb);
+            _bancoContext.SaveChanges();
+
+            return true;
+        }
     }
 }

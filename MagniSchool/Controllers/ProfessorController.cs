@@ -23,6 +23,14 @@ namespace MagniSchool.Controllers
             return View();
         }
 
+        public IActionResult Delete(int id)
+        {
+            Professor professor = _professorRepository.BuscarProfessorPorId(id);
+            return View(professor);
+        }
+
+        
+
         public IActionResult Edit(int id)
         {
             Professor professor = _professorRepository.BuscarProfessorPorId(id);
@@ -41,6 +49,13 @@ namespace MagniSchool.Controllers
         public IActionResult Edit(Professor professor)
         {
              _professorRepository.Atualizar(professor); 
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Deletar(int id)
+        {
+            _professorRepository.Deletar(id);
 
             return RedirectToAction("Index");
         }

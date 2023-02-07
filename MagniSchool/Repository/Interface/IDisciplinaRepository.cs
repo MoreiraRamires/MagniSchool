@@ -9,7 +9,6 @@ namespace MagniSchool.Repository.Interface
         Disciplina AtualizarDados(Disciplina disciplina);
         Disciplina BuscarPorId(int id);
         List<Disciplina> BuscarTodos();
-
-
+        bool Deletar(int id);
     }
 }

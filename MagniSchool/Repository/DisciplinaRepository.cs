@@ -44,5 +44,14 @@ namespace MagniSchool.Repository
             List<Disciplina> disciplinas= _bancoContext.Disciplinas.ToList();
             return disciplinas;
         }
+
+        public bool Deletar(int id)
+        {
+            Disciplina disciplinaDb = BuscarPorId(id);
+            _bancoContext.Disciplinas.Remove(disciplinaDb);
+            _bancoContext.SaveChanges();
+            return true;
+
+        }
     }
 }

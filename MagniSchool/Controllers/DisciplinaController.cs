@@ -30,6 +30,12 @@ namespace MagniSchool.Controllers
 
             return View(disciplina);
         }
+        public IActionResult Delete(int id)
+        {
+            Disciplina disciplina = _disciplinaRepository.BuscarPorId(id);
+
+            return View(disciplina);
+        }
 
         [HttpPost]
         public IActionResult Create(Disciplina disciplina)
@@ -42,6 +48,15 @@ namespace MagniSchool.Controllers
         {
             _disciplinaRepository.AtualizarDados(disciplina);
             
+
+            return RedirectToAction("Index");
+
+        }
+
+        public IActionResult Deletar(int id)
+        {
+           _disciplinaRepository.Deletar(id);
+
 
             return RedirectToAction("Index");
 

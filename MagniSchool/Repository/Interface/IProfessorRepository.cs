@@ -11,5 +11,7 @@ namespace MagniSchool.Repository.Interface
         Professor BuscarProfessorPorId(int id);
         List<Professor> BuscarTodos();
 
+        bool Deletar(int id);
+
     }
 }
