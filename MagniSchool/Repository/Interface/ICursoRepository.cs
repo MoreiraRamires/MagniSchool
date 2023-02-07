@@ -10,5 +10,7 @@ namespace MagniSchool.Repository.Interface
         Curso Adicionar(Curso curso);
 
         Curso Atualizar(Curso curso);
+
+        bool Deletar (int id);
     }
 }

@@ -399,3 +399,4 @@ C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Discipli
 C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Curso\Edit.cshtml.g.cs
 C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Disciplina\Edit.cshtml.g.cs
 C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Professor\Edit.cshtml.g.cs
+C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Curso\Delete.cshtml.g.cs

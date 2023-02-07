@@ -31,7 +31,7 @@
             <td>
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <a class="btn btn-secondary" asp-controller="Curso" asp-action="Edit" asp-route-id="@curso.Id">Editar</a>
-                            <a class="btn btn-danger" asp-controller="Curso" asp-route-id="@curso.Id">Apagar</a>
+                            <a class="btn btn-danger" asp-controller="Curso" asp-action="Delete" asp-route-id="@curso.Id">Apagar</a>
 
                 </div>
             </td>
@@ -43,5 +43,5 @@
 </table>
 }
 
-<a class="btn btn-primary" asp-controller="Curso" asp-action="Create">Atualizar</a>
+<a class="btn btn-primary" asp-controller="Curso" asp-action="Create">Adicionar </a>
 

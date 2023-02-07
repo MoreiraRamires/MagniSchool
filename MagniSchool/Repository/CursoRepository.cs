@@ -43,6 +43,16 @@ namespace MagniSchool.Repository
             List<Curso> cursos = _bancoContext.Cursos.ToList();
             return cursos;
         }
+
+        public bool Deletar(int id)
+        {
+            Curso cursoDb = BuscarCursoPorId(id);
+
+            if (cursoDb == null) throw new System.Exception("Não foi possível deletar esse curso");
+            _bancoContext.Cursos.Remove(cursoDb);
+            _bancoContext.SaveChanges();
+            return true;
+        }
     }
 
 

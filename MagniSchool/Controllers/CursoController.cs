@@ -25,6 +25,18 @@ namespace MagniSchool.Controllers
 
         }
 
+        public IActionResult Delete(int id)
+        {
+            Curso curso = _cursoRepository.BuscarCursoPorId(id);
+            return View(curso);
+        }
+
+        public IActionResult DeleteAll(int id)
+        {
+            _cursoRepository.Deletar(id);
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Create()
         {
 
