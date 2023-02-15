@@ -1,24 +1,29 @@
-﻿@model Curso
+﻿@model Aluno
 
+<h1>Edit page Aluno </h1>
 
-<form asp-controller="Curso" asp-action="Create" method="post">
+@*<form asp-controller="Curso" asp-action="Alterar" method="post">
+    <input type="hidden" asp-for="Id"/>
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputEmail4">Curso</label>
             <input type="text" class="form-control" asp-for="Nome"  placeholder="Nome do Curso">
             @Html.ValidationMessageFor(x => x.Nome)
+
         </div>
         <div class="form-group col-md-6">
             <label for="inputPassword4">Disciplinas</label>
-            <input type="number" class="form-control" asp-for="Disciplinas" placeholder="Digite as disciplinas">
+            <input type="number" class="form-control" asp-for="Disciplinas" placeholder="Digite a quantidade de  disciplinas">
         </div>
     </div>
     <div class="form-group">
         <label for="inputAddress">Professores</label>
-        <input type="text" class="form-control" asp-for="Professor" placeholder="Nome do Professor">
+        <input type="text" class="form-control" asp-for="Professor" placeholder="Nome do Professor Responsável">
         @Html.ValidationMessageFor(x => x.Professor)
 
     </div>
 
-    <button type="submit" class="btn btn-primary">Adicionar</button>
-</form>
+
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+    <a class="btn btn-secondary"  asp-controller="Curso" asp-action="Index">Voltar</a>
+</form>*@

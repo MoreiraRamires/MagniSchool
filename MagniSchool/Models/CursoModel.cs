@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MagniSchool.Models
 {
@@ -6,7 +7,10 @@ namespace MagniSchool.Models
     {
 
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "Informe o Nome do Curso")] 
         public string Nome { get; set; }
+
         public Professor Professor { get; set; }
         public List<Disciplina> Disciplinas { get; set; }
         public List<Aluno> Alunos { get; set; }

@@ -46,18 +46,29 @@ namespace MagniSchool.Controllers
         [HttpPost]
         public IActionResult Create( Curso curso)
         {
-            _cursoRepository.Adicionar(curso);
+            if(ModelState.IsValid)
+            {
+                _cursoRepository.Adicionar(curso);
+                return RedirectToAction("Index");
+            }
 
-            return RedirectToAction("Index");
+            return View(curso);
+
 
         }
 
         [HttpPost]
         public IActionResult Alterar(Curso curso)
         {
-            _cursoRepository.Atualizar(curso);
+            if (ModelState.IsValid)
+            {
+                _cursoRepository.Atualizar(curso);
 
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+
+            }
+
+            return View("Edit",curso);
         }
     }
 }

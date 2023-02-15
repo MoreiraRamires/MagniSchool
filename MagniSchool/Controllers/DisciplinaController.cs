@@ -40,8 +40,11 @@ namespace MagniSchool.Controllers
         [HttpPost]
         public IActionResult Create(Disciplina disciplina)
         {
-            _disciplinaRepository.Adicionar(disciplina);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _disciplinaRepository.Adicionar(disciplina);
+                return RedirectToAction("Index");
+            } return View(disciplina);
         }
 
         public IActionResult Alterar(Disciplina disciplina)

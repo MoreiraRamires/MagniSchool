@@ -41,16 +41,25 @@ namespace MagniSchool.Controllers
         [HttpPost]
         public IActionResult Create(Professor professor)
         {
-            _professorRepository.Adicionar(professor);
-            return RedirectToAction("Index");
+
+            if(ModelState.IsValid)
+            {
+                _professorRepository.Adicionar(professor);
+                return RedirectToAction("Index");
+
+            }
+            return View(professor);
         }
 
         [HttpPost]
         public IActionResult Edit(Professor professor)
         {
-             _professorRepository.Atualizar(professor); 
-
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _professorRepository.Atualizar(professor); 
+                return RedirectToAction("Index");
+            }
+            return View(professor);
         }
 
         public IActionResult Deletar(int id)

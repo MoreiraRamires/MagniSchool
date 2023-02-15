@@ -1,0 +1,22 @@
+﻿@model Aluno
+
+<h1>Create page Aluno </h1>
+
+@*
+
+<form asp-controller="Aluno" asp-action="Create" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Curso</label>
+            <input type="text" class="form-control" asp-for="Nome"  placeholder="Nome do Curso">
+            @Html.ValidationMessageFor(x => x.Nome)
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputPassword4">Matricula</label>
+            <input type="number" class="form-control" asp-for="Matricula" placeholder="Digite o número da Matricula">
+            @Html.ValidationMessageFor(x => x.Matricula)
+        </div>
+   
+
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+</form>*@

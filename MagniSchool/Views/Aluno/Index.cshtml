@@ -1,0 +1,10 @@
+﻿@model List<Aluno>
+
+<h1>Página do Aluno</h1>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+        <a class="btn btn-secondary" asp-controller="Aluno" asp-action="Edit" asp-route-id="1">Editar</a>
+        <a class="btn btn-danger" asp-controller="Aluno" asp-action="Delete" asp-route-id="1">Apagar</a>
+        <a class="btn btn-danger" asp-controller="Aluno" asp-action="Create" asp-route-id="1">Criar</a>
+
+</div>

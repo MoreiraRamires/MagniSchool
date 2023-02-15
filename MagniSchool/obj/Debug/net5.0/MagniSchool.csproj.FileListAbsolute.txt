@@ -402,3 +402,7 @@ C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Professo
 C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Curso\Delete.cshtml.g.cs
 C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Disciplina\Delete.cshtml.g.cs
 C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Professor\Delete.cshtml.g.cs
+C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Aluno\Index.cshtml.g.cs
+C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Aluno\Create.cshtml.g.cs
+C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Aluno\Delete.cshtml.g.cs
+C:\Projects\cursos\MagniSchool\MagniSchool\obj\Debug\net5.0\Razor\Views\Aluno\Edit.cshtml.g.cs
