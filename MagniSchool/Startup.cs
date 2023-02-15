@@ -32,6 +32,7 @@ namespace MagniSchool
             services.AddScoped<ICursoRepository,CursoRepository>();
             services.AddScoped<IProfessorRepository, ProfessorRepository>();
             services.AddScoped<IDisciplinaRepository, DisciplinaRepository>();
+            services.AddScoped<IAlunoRepository, AlunoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

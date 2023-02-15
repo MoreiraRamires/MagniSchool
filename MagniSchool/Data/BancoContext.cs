@@ -16,6 +16,8 @@ namespace MagniSchool.Data
 
         public DbSet<Disciplina> Disciplinas { get; set; }
 
+        public DbSet<Aluno> Alunos { get; set; }
+
     }
 
 }

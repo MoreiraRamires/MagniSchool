@@ -1,10 +1,19 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MagniSchool.Models;
+using MagniSchool.Repository.Interface;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MagniSchool.Controllers
 {
     public class AlunoController : Controller
     {
+
+        private readonly IAlunoRepository _alunoRepository;
+        public AlunoController(IAlunoRepository alunoRepository)
+        {
+            _alunoRepository = alunoRepository;
+        }
+
         // GET: AlunoController
         public ActionResult Index()
         {
@@ -25,17 +34,17 @@ namespace MagniSchool.Controllers
 
         // POST: AlunoController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Aluno aluno)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+           
+                if (ModelState.IsValid)
+                {
+                    _alunoRepository.Adicionar(aluno);
+                    return RedirectToAction("Index");
+                }
+                return View(aluno);
+           
+
         }
 
         // GET: AlunoController/Edit/5
